@@ -22,6 +22,10 @@ public class FileService {
 			while ((line = fileReader.readLine()) != null) {
 				String[] lineData = line.split(",");
 				Pig pig = new Pig(lineData[0], lineData[1]);
+				
+				pig.setName(lineData[0]);
+				pig.setStatus(lineData[1]);
+				
 				pigs[i] = pig;
 				i++;
 			}
